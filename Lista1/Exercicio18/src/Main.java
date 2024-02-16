@@ -11,7 +11,7 @@ public class Main {
         System.out.println("Digite o valor B de uma equação de primeiro grau");
         n2 = in.nextDouble();
 
-        result = (0-n2) / n1;
+        result = -n2/n1;
         System.out.println("O valor de X é: " + result);
 
     }

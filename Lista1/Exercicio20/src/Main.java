@@ -3,19 +3,17 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
 
-        double n1, n2, n3,result;
+        double x1,x2,b,c;
         Scanner in = new Scanner(System.in);
-        System.out.println("Digite o valor A de uma equação de primeiro grau:");
-        n1 = in.nextDouble();
+        System.out.println("x1:");
+        x1=in.nextDouble();
 
-        System.out.println("Digite o valor B de uma equação de primeiro grau");
-        n2 = in.nextDouble();
+        System.out.println("x1:");
+        x2=in.nextDouble();
 
-        System.out.println("Digite o valor B de uma equação de primeiro grau");
-        n3 = in.nextDouble();
+        b=-(x1+x2);
+        c=x1*x2;
 
-        result = (0-n2) / n1;
-        System.out.println("O valor de X é: " + result);
-
+        System.out.println("X² + (" + b + "x) +" + c+" = 0");
     }
 }
