@@ -2,27 +2,24 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
 
-        System.out.println("Digite os três valores para os lados do triângulo:");
-        System.out.print("Lado 1: ");
-        double lado1 = scanner.nextDouble();
-        System.out.print("Lado 2: ");
-        double lado2 = scanner.nextDouble();
-        System.out.print("Lado 3: ");
-        double lado3 = scanner.nextDouble();
+        int a, b, c;
+        Scanner in = new Scanner(System.in);
+        System.out.println("Entre com as tres medidas: ");
+        a = in.nextInt();
+        b = in.nextInt();
+        c = in.nextInt();
 
-        if (lado1 < lado2 + lado3 && lado2 < lado1 + lado3 && lado3 < lado1 + lado2) {
-            if (lado1 == lado2 && lado2 == lado3) {
-                System.out.println("É um triângulo equilátero.");
-            } else if (lado1 == lado2 || lado1 == lado3 || lado2 == lado3) {
-                System.out.println("É um triângulo isósceles.");
-            } else {
-                System.out.println("É um triângulo escaleno.");
-            }
-        } else {
-            System.out.println("Estes valores não formam um triângulo.");
-        }
-
+        if(a<b+c && a>Math.abs(b-c) &&
+                b<a+c && b>Math.abs(a-c) &&
+                c<b+a && c>Math.abs(b-a)){
+            if(a==b && a==c)
+                System.out.println("Triangulo equilatero");
+            else if (a==b || a==c || b==c)
+                System.out.println("Triangulo isoceles");
+            else
+                System.out.println("Triangulo escaleno");
+        }else
+            System.out.println("Os valores digitados não formam um triângulo");
     }
 }

@@ -14,15 +14,15 @@ public class Main {
         double c = scanner.nextDouble();
 
 
-        double discriminante = b * b - 4 * a * c;
+        double delta = b * b - 4 * a * c;
 
 
-        if (discriminante > 0) {
+        if (delta > 0) {
 
-            double x1 = (-b + Math.sqrt(discriminante)) / (2 * a);
-            double x2 = (-b - Math.sqrt(discriminante)) / (2 * a);
+            double x1 = (-b + Math.sqrt(delta)) / (2 * a);
+            double x2 = (-b - Math.sqrt(delta)) / (2 * a);
             System.out.println("As soluções são: x1 = " + x1 + " e x2 = " + x2);
-        } else if (discriminante == 0) {
+        } else if (delta == 0) {
             double x = -b / (2 * a);
             System.out.println("A solução é: x = " + x);
         } else {
